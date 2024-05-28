@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <div class="turn-indicator" id="turnIndicator">X's Turn</div>
+            <button id="reset" class="reset-button">↻</button>
+        </div>
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <p class="winner-message" id="winnerMessage"></p>
+                <div class="overlay-buttons">
+                    <button id="quit" class="overlay-button">Quit</button>
+                    <button id="nextRound" class="overlay-button">Next Round</button>
+                </div>
+            </div>
+        </div>
+        <div class="scoreboard">
+            <div class="result-cards1">X Wins: <span id="xWins">0</span></div>
+            <div class="result-cards2">O Wins: <span id="oWins">0</span></div>
+            <div class="result-cards3">Draws: <span id="draws">0</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

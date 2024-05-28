@@ -1,0 +1,187 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #192a32;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+    /* color: white; */
+    /* color: black; */
+  }
+  
+  .game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .turn-indicator {
+    font-size: 1.5rem;
+    color: #31c4be;
+  }
+  
+  .reset-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #1f3540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cell:hover {
+    background-color: #444;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .overlay-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .winner-message {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #32a1a0;
+  }
+  
+  .overlay-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .overlay-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .overlay-button:nth-child(1) {
+    background-color: #a2b8c3;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .overlay-button:nth-child(2) {
+    background-color: #f2b237;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .overlay.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .scoreboard {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+  
+  .cross-line {
+    position: absolute;
+    width: 6px;
+    height: 306px;
+    background-color: #ffd700;
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    visibility: hidden;
+  }
+  
+  .horizontal {
+    width: 306px;
+    height: 6px;
+    background-color: #ffd700;
+  }
+  
+  .vertical {
+    width: 6px;
+    height: 306px;
+    background-color: #ffd700;
+  }
+  
+  .diagonal-1 {
+    width: 6px;
+    height: 306px;
+    background-color: #ffd700;
+    transform: rotate(45deg);
+    transform-origin: 0% 100%;
+  }
+  
+  .diagonal-2 {
+    width: 6px;
+    height: 306px;
+    background-color: #ffd700;
+    transform: rotate(-45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  
+  .result-cards1{
+      padding: 7px;
+      border-radius: 5px;
+      background-color: #31c4be;
+  }
+  
+  .result-cards2{
+      padding: 7px;
+      border-radius: 5px;
+      background-color: #a8bec9;
+  }
+  
+  .result-cards3{
+      padding: 7px;
+      border-radius: 5px;
+      background-color: #f2b237;
+  }
